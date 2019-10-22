@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 
 public class DateTimeTwo {
@@ -63,6 +64,20 @@ public class DateTimeTwo {
 			input = file.nextLine();
 		}
 		file.close();
+	}
+
+	
+	public void dateHashMap() {
+        for (Map.Entry<LocalDate,Integer> entry : dates.entrySet())  
+            System.out.println(entry.getKey() + ":" + entry.getValue());  
+	
+		
+	}
+
+	public void dateHashMapSorted() {
+		TreeMap<LocalDate,Integer> sort = new TreeMap<>(dates); 
+        for (Map.Entry<LocalDate,Integer> entry : sort.entrySet())  
+            System.out.println(entry.getKey() + ":" + entry.getValue());  		
 	}
 	
 
