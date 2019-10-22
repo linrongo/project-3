@@ -38,7 +38,7 @@ public class Main
 		
 		/**
 		 * Section 1
-		 * Current value of “Second” will be stored in vlaueOfSecondNow 
+		 * Current value of â€œSecondâ€� will be stored in vlaueOfSecondNow 
 		 * and will print as, "The value of Second now: 58"
 		 * Remember, this is the format only, value should be the current time.
 		 */
@@ -210,13 +210,13 @@ public class Main
 		HashMap<String, Integer> asciiVal = new HashMap<String, Integer>();
 		asciiVal.put(stId, asciiAvg);
 		System.out.print("ASCII average: ");
-		//System.out.println(asciiAvg);
+		System.out.println(asciiAvg);
 		
 	    /**
 	     * Calculate and print the ASCII average as per PDF. This value for NRMN as a sample.
 		 * Output: 79
 		 */
-		System.out.println(asciiVal.get(stId));		
+		//System.out.println(asciiVal.get(stId));		
 		
 		MesoEquivalent mesoEqual = new MesoEquivalent(stId);		
 	    /**

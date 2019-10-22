@@ -94,7 +94,7 @@ public class DateTimeOne extends MesoDateTimeOneAbstract
 		    style3[3] = LocalDateTime.parse(style1.get("ZST"), time);
 		    style3[4] = LocalDateTime.parse(style1.get("GMT"), time);
 	    Arrays.sort(style3, Collections.reverseOrder());
-	    System.out.println("Print Style 5: Final sorted Array");
+	    System.out.println("Print Style 5: Final sorted Array:");
 	    	for (LocalDateTime e : style3)
 	    		System.out.println(e);
 	    
