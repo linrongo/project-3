@@ -3,16 +3,9 @@
  * @version 2019-10-08
 */
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+
 
 public class Main 
 {
@@ -26,7 +19,6 @@ public class Main
 		 * immediately above the line of code.
 		 * Looking at the sample text output will give you a better idea about output. 
 		 */
-		int sectionCount = 0;		
 		int allowedValueForSecond = 55;
 		DateTimeOne dateTimeOne = new DateTimeOne();
 		/**
@@ -203,20 +195,20 @@ public class Main
 		 * For details first see the PDF Section 3 Extension
 		 * 
 		 */
-		String stId = "OKCE";
+		String stId = "NRMN";
 		MesoAsciiCal asciiAverage = new MesoAsciiCal(new MesoStation(stId));
 		int asciiAvg = asciiAverage.calAverage();		
 
 		HashMap<String, Integer> asciiVal = new HashMap<String, Integer>();
 		asciiVal.put(stId, asciiAvg);
 		System.out.print("ASCII average: ");
-		System.out.println(asciiAvg);
+		//System.out.println(asciiAvg);
 		
 	    /**
 	     * Calculate and print the ASCII average as per PDF. This value for NRMN as a sample.
 		 * Output: 79
 		 */
-		//System.out.println(asciiVal.get(stId));		
+		System.out.println(asciiVal.get(stId));		
 		
 		MesoEquivalent mesoEqual = new MesoEquivalent(stId);		
 	    /**

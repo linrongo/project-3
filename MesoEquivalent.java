@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,13 +25,13 @@ public class MesoEquivalent {
 			asciiAverage = new MesoAsciiCal(m);
 			asciiAvg = asciiAverage.calAverage();
 			
-			if (asciiAvg == ASCIIAVG) list.put(m.getStID(), asciiAvg);		
+			if (asciiAvg == ASCIIAVG) 
+				list.put(m.getStID(), asciiAvg);		
 		}
-		System.out.println(list);
 		return list;
 	}
 
-	protected ArrayList<MesoStation> readFile() throws IOException {
+	private ArrayList<MesoStation> readFile() throws IOException {
 		ArrayList<MesoStation> stationList = new ArrayList<MesoStation>();
 		
 		BufferedReader profile = new BufferedReader(new FileReader("Mesonet.txt"));

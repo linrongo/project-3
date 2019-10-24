@@ -1,11 +1,11 @@
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.TreeMap;
 
 
@@ -32,11 +32,11 @@ public class DateTimeTwo {
 
 	public void compareYear() throws IOException  {
 		
-		Scanner file = new Scanner(new File("Dates.txt"));
+		BufferedReader file = new BufferedReader(new FileReader("Dates.txt"));
 		dates = new HashMap<LocalDate,Integer>();
 		final Integer LINE_LIM = 10;
 		
-		String input = file.nextLine();
+		String input = file.readLine();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM.dd.yyyy");
 		LocalDate date;
 		now =  LocalDate.now();
@@ -44,7 +44,7 @@ public class DateTimeTwo {
 		int yearDiff = 0;
 		int monthDiff = 0;
 		int dayDiff = 0;
-		for(Integer i = 1; i< LINE_LIM;i++) {
+		for(Integer i = 1; i<=LINE_LIM ;i++) {
 			
 			date = LocalDate.parse(input, formatter);	
 			dates.put(date, i);
@@ -54,14 +54,14 @@ public class DateTimeTwo {
 			dayDiff = Math.abs(date.getDayOfMonth() - now.getDayOfMonth());
 			
 			if (date.isLeapYear()) 		
-				System.out.println(date.getYear() + " is a leap year, and Diffrence: " + yearDiff + " years, "
-						+ monthDiff + " months, " + dayDiff + " days.");
+				System.out.println(date.getYear() + " is a leap year, and Difference: " + yearDiff + " years, "
+						+ monthDiff + " months, and " + dayDiff + " days.");
 			
 			else 
-				System.out.println(date.getYear() + " is a not leap year, and Diffrence: " + yearDiff + " years, "
-						+ monthDiff + " months, " + dayDiff + " days.");
+				System.out.println(date.getYear() + " is not a leap year, and Difference: " + yearDiff + " years, "
+						+ monthDiff + " months, and " + dayDiff + " days.");
 		
-			input = file.nextLine();
+			input = file.readLine();
 		}
 		file.close();
 	}

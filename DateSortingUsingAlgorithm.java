@@ -1,11 +1,11 @@
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.TreeMap;
 
 public class DateSortingUsingAlgorithm {
@@ -13,23 +13,24 @@ public class DateSortingUsingAlgorithm {
 	 private HashMap<LocalDate, Integer> dates;
 	 
 	public DateSortingUsingAlgorithm() throws IOException {
-		 	Scanner file = new Scanner(new File("SortingDates.txt"));
+		BufferedReader file = new BufferedReader(new FileReader("SortingDates.txt"));
 			dates = new HashMap<LocalDate,Integer>();
 			
-			String input = file.nextLine();
-			input = input.trim();
-			input = input.replace(" ", "");
+			String input = file.readLine();
+			
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 			LocalDate date;
 			final int LIMIT = 20;
-			for (int i = 1; i < LIMIT; ++i){
+			
+			for (int i = 1; i <= LIMIT; ++i){
+				input = input.trim();
+				input = input.replace(" ", "");
+				
 				date = LocalDate.parse(input, formatter);	
 				dates.put(date,i);
 				
-				++i;
-				input = file.nextLine();
-				input = input.trim();
-				input = input.replace(" ", "");
+				input = file.readLine();
+				
 			}
 		file.close();
 	 }

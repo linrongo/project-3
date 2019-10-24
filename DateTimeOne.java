@@ -71,7 +71,7 @@ public class DateTimeOne extends MesoDateTimeOneAbstract
 			style1.put("CST", time.format(cst));
 			style1.put("ZST", "11/05/2018 19:59");
 			style1.put("GMT", time.format(gmt));
-		System.out.println("\nPrint Style 1: ");
+		System.out.println("Print Style 1: ");
 		 TreeMap<String, String> sort = new TreeMap<>(style1); 
 	        for (Map.Entry<String, String> entry : sort.entrySet())  
 	            System.out.println(entry.getKey() + " " + entry.getValue());  
