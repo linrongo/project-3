@@ -10,21 +10,24 @@ public class MesoEquivalent {
 	private final int ASCIIAVG;
 	
 	public MesoEquivalent(String stID) {
+	// set stid, asciiAverage, and the Average
 		this.stID = stID;
 		asciiAverage = new MesoAsciiCal(new MesoStation(stID));
 		ASCIIAVG = asciiAverage.calAverage();	
 	}
 
 	public HashMap<String,Integer> calAsciiEqual() throws IOException {
+	// Create a hash map and put the original stid and the average in it
 		HashMap<String,Integer> list = new HashMap<String,Integer>();		
 		list.put(stID,ASCIIAVG);
+	// read the file and create an arraylist of mesoStation
 		ArrayList<MesoStation> stationList = readFile();
 		int asciiAvg = 0;
-
+	// go through the arraylist and calculate the ascii average of each STID
 		for(MesoStation m: stationList) {
 			asciiAverage = new MesoAsciiCal(m);
 			asciiAvg = asciiAverage.calAverage();
-			
+		// put it in the HashMap if they hav the same Average Ascii
 			if (asciiAvg == ASCIIAVG) 
 				list.put(m.getStID(), asciiAvg);		
 		}
