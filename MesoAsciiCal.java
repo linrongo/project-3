@@ -4,6 +4,7 @@ public class MesoAsciiCal extends MesoAsciiAbstract
 	private String stid;
 	public MesoAsciiCal(MesoStation meso) {
 		stid = meso.getStID();
+		calAverage();
 	}
 
 	
@@ -17,13 +18,18 @@ public class MesoAsciiCal extends MesoAsciiAbstract
 			}
 		// divide total by 4
 			double asciiAve = asciiTot/4.0;
+			int avg = 0;
+			int ceil = 0;
+			
 		// get average from ceiling of the diffence is >= .25
-			if(asciiAve - Math.floor(asciiAve ) >= 0.25) {
-				return (int) Math.ceil(asciiAve);
+			if((asciiAve - Math.floor(asciiAve )) < 0.25) {
+			 avg =  (int) Math.floor(asciiAve);
 			}
 			
 		// otherwise get average from floor value
-			else return (int) Math.floor(asciiAve);
+			else avg = (int) Math.ceil(asciiAve);
+	
+	return (avg + 79) /2;
+	
 	}
-   
 }

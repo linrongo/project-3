@@ -12,7 +12,6 @@ public class DateTimeOne extends MesoDateTimeOneAbstract
 	// get Current Date and Time
 	private LocalDateTime locNow = LocalDateTime.now();
 	
-
 	@Override
 	int getValueOfSecond() {
 	// print and return second now

@@ -195,7 +195,7 @@ public class Main
 		 * For details first see the PDF Section 3 Extension
 		 * 
 		 */
-		String stId = "NRMN";
+		String stId = "OKCE";
 		MesoAsciiCal asciiAverage = new MesoAsciiCal(new MesoStation(stId));
 		int asciiAvg = asciiAverage.calAverage();		
 
