@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
+import java.time.temporal.ChronoUnit;
+
 
 
 public class DateTimeTwo {
@@ -41,17 +43,17 @@ public class DateTimeTwo {
 		LocalDate date;
 		now =  LocalDate.now();
 		
-		int yearDiff = 0;
-		int monthDiff = 0;
-		int dayDiff = 0;
+		long yearDiff = 0;
+		long monthDiff = 0;
+		long dayDiff = 0;
 		for(Integer i = 1; i<=LINE_LIM ;i++) {
 			
 			date = LocalDate.parse(input, formatter);	
 			dates.put(date, i);
 		
-			yearDiff = Math.abs(date.getYear() - now.getYear());
-			monthDiff = Math.abs(date.getMonthValue() - now.getMonthValue());
-			dayDiff = Math.abs(date.getDayOfMonth() - now.getDayOfMonth());
+			yearDiff =  ChronoUnit.YEARS.between(date, now);
+			dayDiff = ChronoUnit.DAYS.between(date, now) % 30;			
+			monthDiff = ChronoUnit.MONTHS.between(date, now) % 12;
 			
 			if (date.isLeapYear()) 		
 				System.out.println(date.getYear() + " is a leap year, and Difference: " + yearDiff + " years, "
