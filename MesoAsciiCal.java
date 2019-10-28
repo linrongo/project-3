@@ -19,7 +19,6 @@ public class MesoAsciiCal extends MesoAsciiAbstract
 		// divide total by 4
 			double asciiAve = asciiTot/4.0;
 			int avg = 0;
-			int ceil = 0;
 			
 		// get average from ceiling of the diffence is >= .25
 			if((asciiAve - Math.floor(asciiAve )) < 0.25) {
@@ -28,7 +27,7 @@ public class MesoAsciiCal extends MesoAsciiAbstract
 			
 		// otherwise get average from floor value
 			else avg = (int) Math.ceil(asciiAve);
-	
+	// take average of the station and "NRMN"
 	return (avg + 79) /2;
 	
 	}
