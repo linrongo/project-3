@@ -1,6 +1,6 @@
 # project-3
 
-          Section 1:
+    Section 1:
     DateTimeOne:
     1. getValueOfSecond() - get second from The LocalDateTime created
     2. dateTimeNow() - get the current LocalDateTime and Print it out using DateTimeFormatter.
@@ -10,7 +10,7 @@
                            Create the scond tree map with key from the content of the first one, sort it using TreeMap and print out the keys.
                            Create an array and put the LocalDateTime of those zones in it, sort it and pring it out.
 
-	Section 2:
+    Section 2:
     DateTimeTwo:
     1. daysOfCurrentMonth() - get the dateNumber of current month and get the day of the week from that.
     2. daysOfAnyMonth() - set local date from the month and year of the inout and get the 15th and last day of that mongh. To get the last day of the month, get the length of the input month and get that value as the last day.
@@ -27,7 +27,7 @@
                         Go through that list and calculate the ascii average of each of the station, it it match with the input station ascii average, it it into a HashMap with the stID being the key and its average as the value.
     3. MesoLexicographical - Sort the input array using TreeMap.
 				
-        Section 4:
+     Section 4:
      DateSortingUsingAlgorithm
      1. DateSortingUsingAlgorithm() - read the file and turn its contents into Localdates, and put them into a HashMap
      2. dateHashMapSortedDescending() - Using TreeMap and Collections.reverseOrder() to sort the dates in a decending order, then print out it's contents.
