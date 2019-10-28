@@ -17,4 +17,11 @@
     3. CompareYear() - read the dates in the file and turn that into LocalDate, put it in a HashMap,calculate the differnece between that date and current date then see if they are leap year or not, and put them into the correct output form,.
     4. dateHashMap() - print out the content of the HashMap createed before.
     5. dateHashMapSorted() - sort map using TreeMap and print out the contents.
+   The sorted List in this one is different from the sorted list in part 1 is due to the fact that part 1 uses String as keys and part 2 use LocalDate as keys. However, they both can be sort using TreeMap.
   Section 3: 
+    1. MesoAsciiCal - calculate the average ascii value of the input station's stid, them calculate the average between that and the ascii value average of "NRMN".
+    2. MesoEquivalent - read through the file, trim, replace spaces, turn it into MesoStation and put it all into a array list od MesoStation.
+                        Go through that list and calculate the ascii average of each of the station, it it match with the input station ascii average, it it into a HashMap with the stID being the key and its average as the value.
+    3. MesoLexicographical - Sort the input array using TreeMap.
+  Section 4:
+    1. 
