@@ -24,4 +24,9 @@
                         Go through that list and calculate the ascii average of each of the station, it it match with the input station ascii average, it it into a HashMap with the stID being the key and its average as the value.
     3. MesoLexicographical - Sort the input array using TreeMap.
   Section 4:
-    1. 
+    DateSortingUsingAlgorithm
+    1. DateSortingUsingAlgorithm() - read the file and turn its contents into Localdates, and put them into a HashMap
+    2. dateHashMapSortedDescending() - Using TreeMap and Collections.reverseOrder() to sort the dates in a decending order, then print out it's contents.
+    3. dateHashMapSorted() - Sort using TreeMap and print out the contents.
+    
+    dateHashMapSortedDescending() tend to takes just around 0.1 ms to 0.3 ms more than dateHashMapSorted(). The reason for this is because it has to go through Collections.reverseOrder() method to sort in decending order while dateHashMapSorted() does not have to.
