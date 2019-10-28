@@ -1,6 +1,7 @@
 # project-3
 
- Section 1:
+ 
+	Section 1:
   DateTimeOne:
   1. getValueOfSecond() - get second from The LocalDateTime created
   2. dateTimeNow() - get the current LocalDateTime and Print it out using DateTimeFormatter.
@@ -10,7 +11,8 @@
                         with the name of the region being key and the date and time format as value. Sort it using TreeMap and print out its contents.
                         Create the scond tree map with key from the content of the first one, sort it using TreeMap and print out the keys.
                         Create an array and put the LocalDateTime of those zones in it, sort it and pring it out.
-  Section 2:
+ 
+	Section 2:
     DateTimeTwo:
     1. daysOfCurrentMonth() - get the dateNumber of current month and get the day of the week from that.
     2. daysOfAnyMonth() - set local date from the month and year of the inout and get the 15th and last day of that mongh. To get the last day of the month, get the length of the input month and get that value as the last day.
@@ -18,11 +20,13 @@
     4. dateHashMap() - print out the content of the HashMap createed before.
     5. dateHashMapSorted() - sort map using TreeMap and print out the contents.
    The sorted List in this one is different from the sorted list in part 1 is due to the fact that part 1 uses String as keys and part 2 use LocalDate as keys. However, they both can be sort using TreeMap.
-  Section 3: 
+ 
+	Section 3: 
     1. MesoAsciiCal - calculate the average ascii value of the input station's stid, them calculate the average between that and the ascii value average of "NRMN".
     2. MesoEquivalent - read through the file, trim, replace spaces, turn it into MesoStation and put it all into a array list od MesoStation.
                         Go through that list and calculate the ascii average of each of the station, it it match with the input station ascii average, it it into a HashMap with the stID being the key and its average as the value.
     3. MesoLexicographical - Sort the input array using TreeMap.
+				
   Section 4:
     DateSortingUsingAlgorithm
     1. DateSortingUsingAlgorithm() - read the file and turn its contents into Localdates, and put them into a HashMap
